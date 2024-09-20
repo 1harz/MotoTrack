@@ -31,7 +31,7 @@ MotoTrack é um aplicativo móvel abrangente para motociclistas, projetado para 
 <table>
   <tr>
     <td align="center">
-      <a href="link rodrigo gitlab">
+      <a href="link quebrado">
         <img src="link rodrigo" width="100px;" alt="Foto de Rodrigo Lemos"/><br>
         <sub>
           <b>Rodrigo Lemos</b>
@@ -39,7 +39,7 @@ MotoTrack é um aplicativo móvel abrangente para motociclistas, projetado para 
       </a>
     </td>
     <td align="center">
-      <a href="https://gitlab.com/raulfalluh">
+      <a href="https://github.com/1harz">
         <img src="https://avatars.githubusercontent.com/u/132016342?v=4" width="100px;" alt="Foto de Raul Fragoso"/><br>
         <sub>
           <b>Raul Fragoso</b>
