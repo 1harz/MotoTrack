@@ -1,0 +1,49 @@
+@startuml
+
+package profiles {
+  class Profile {}
+}
+
+package utility {
+    class UtilityPackageFuntions {
+        +GenerateStringID(): string
+    }
+}
+
+package users {
+    class User {
+        -ID: string
+        -Name: string
+        -Email: string
+        -Password: string
+        -Profile: profiles.Profile
+        -Metadata: metadata
+        
+        ~NewUser(id: string, name: string, email: string, password: string, profile: profiles.Profile, meta: metadata): User
+        +Authenticate(password: string): bool
+        +SetProfile(p: profiles.Profile): void
+        +AddMetadata(key: string, value: string): void
+        +GetMetadata(key: string): string
+    }
+
+    class UserFactory {
+        +NewUserFactory(): UserFactory
+        +CreateUser(name: string, email: string, password: string, profile: profiles.Profile, meta: metadata): User
+        +CreateUserWithoutMetadata(name: string, email: string, password: string, profile: profiles.Profile): User
+        +CreateUserWithoutProfile(name: string, email: string, password: string, meta: metadata): User
+        +CreateBasicUser(name: string, email: string, password: string): User
+    }
+
+    class metadata {
+        -Data: map[string]string
+        
+        ~NewMetadata(): metadata
+        ~Add(key: string, value: string): void
+        ~Get(key: string): string
+    }
+
+    User "1" *-- "1" metadata : composition
+    User "1" o-- "1" profiles.Profile : aggregation
+}
+
+@enduml
